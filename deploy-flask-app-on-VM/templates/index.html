@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Interactive App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Flask App</h1>
+    <p>Enter your name below, and I'll greet you!</p>
+    <form method="POST" action="/">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <button type="submit">Greet Me</button>
+    </form>
+    {% if name %}
+        <h2>Hello, {{ name }}! 👋</h2>
+    {% endif %}
+</body>
+</html>
+
